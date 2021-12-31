@@ -33,17 +33,16 @@ class App extends React.Component {
     }
 
     render() {
+        const { value, newOmen } = this.state;
         return (
             <div className="container" >
                 <h1>Wylosuj swoją wróżbę</h1>
                 <div className="input">
-                    <Input change={this.handleInput} value={this.state.value} />
+                    <Input change={this.handleInput} value={value} />
                     <ButtonAddOmens click={this.handleAddOmen} />
                 </div>
                 <ButtonRandomOmen click={this.handleShowOmen} />
-                <Result result={this.state.newOmen} />
-
-
+                <Result result={newOmen} />
             </div>
         )
     }
